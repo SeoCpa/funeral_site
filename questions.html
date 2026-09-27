@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Оказание ритуальных услуг: вопросы, захоронение, оплата, отзывы</title>
+<meta name="description" content="Пошаговый порядок оказания ритуальных услуг: что делать после смерти близкого, какие документы нужны, куда обращаться и как проходит организация похорон.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F2EC; --bg-alt:#ECE7DD; --ink:#2A2924; --ink-soft:#5C594F;
+  --line:#D8D1C2; --accent:#5F6F52; --accent-dark:#465038; --gold:#A9824A; --card-bg:#FFFDF9;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1E1D19; --bg-alt:#25241F; --ink:#EDE9DF; --ink-soft:#B7B1A2;
+    --line:#3A382F; --card-bg:#26251F; --accent:#8FA37E; --accent-dark:#7C9268; --gold:#C7A06B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1E1D19; --bg-alt:#25241F; --ink:#EDE9DF; --ink-soft:#B7B1A2;
+  --line:#3A382F; --card-bg:#26251F; --accent:#8FA37E; --accent-dark:#7C9268; --gold:#C7A06B;
+}
+html{scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior:smooth;}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'PT Sans', sans-serif; font-size:17px; line-height:1.6;}
+h1,h2,h3{font-family:'PT Serif', serif; font-weight:700; margin:0 0 .4em; color:var(--ink);}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem); line-height:1.18;}
+h2{font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.25;}
+h3{font-size:1.1rem;}
+p{margin:0 0 1em; max-width:70ch; color:var(--ink-soft);}
+a{color:var(--accent-dark);}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+header.top{position:sticky; top:0; z-index:20; background:var(--bg); border-bottom:1px solid var(--line); padding-top: env(safe-area-inset-top, 0px);}
+.topbar{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1080px; margin:0 auto; gap:16px; flex-wrap:wrap;}
+.brand{font-family:'PT Serif', serif; font-weight:700; font-size:1.2rem; white-space:nowrap; text-decoration:none; color:var(--ink);}
+nav{display:flex; gap:18px; flex-wrap:wrap; font-size:.9rem;}
+nav a{text-decoration:none; color:var(--ink-soft);}
+nav a.active{color:var(--accent-dark); font-weight:700;}
+nav a:hover{color:var(--accent-dark);}
+.phone-btn{background:var(--accent); color:#fff; padding:9px 16px; border-radius:2px; text-decoration:none; font-weight:700; white-space:nowrap; font-size:.9rem;}
+.phone-btn:hover{background:var(--accent-dark);}
+.hero{padding:56px 0 40px; border-bottom:1px solid var(--line);}
+.hero .eyebrow{color:var(--gold); font-size:.9rem; margin-bottom:12px;}
+.hero-actions{display:flex; gap:14px; margin-top:22px; flex-wrap:wrap;}
+.btn-primary{background:var(--accent); color:#fff; padding:13px 24px; border-radius:2px; text-decoration:none; font-weight:700; display:inline-block;}
+.btn-primary:hover{background:var(--accent-dark);}
+.btn-secondary{border:1px solid var(--ink); color:var(--ink); padding:13px 24px; border-radius:2px; text-decoration:none; font-weight:700; display:inline-block;}
+section{padding:48px 0;}
+section.alt{background:var(--bg-alt);}
+.section-head{max-width:60ch; margin-bottom:28px;}
+.grid{display:grid; gap:18px;}
+.grid.cols-2{grid-template-columns:repeat(2,1fr);}
+.grid.cols-3{grid-template-columns:repeat(3,1fr);}
+.card{background:var(--card-bg); border:1px solid var(--line); padding:22px; border-radius:2px;}
+.card h3{margin-bottom:.5em;}
+.card p{font-size:.95rem; margin-bottom:0;}
+.card .tag{font-size:.78rem; color:var(--gold); display:block; margin-bottom:8px;}
+.price-row{display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid var(--line);}
+.price-row:last-child{border-bottom:none;}
+.price-row .name{font-weight:700;}
+.price-row .desc{font-size:.88rem; color:var(--ink-soft); margin-top:3px;}
+.price-row .value{white-space:nowrap; font-family:'PT Serif',serif; color:var(--accent-dark); font-weight:700;}
+.faq details{border-bottom:1px solid var(--line); padding:14px 0;}
+.faq summary{cursor:pointer; font-weight:700; font-family:'PT Serif',serif; font-size:1.02rem; list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:'+'; float:right; color:var(--gold);}
+.faq details[open] summary::after{content:'\2013';}
+.faq details p{margin-top:8px;}
+.callout{background:var(--accent); color:#fff; padding:36px; text-align:center; border-radius:2px;}
+.callout h2{color:#fff;}
+.callout p{color:#EDE9DA; margin:0 auto 18px;}
+.callout .btn-primary{background:#fff; color:var(--accent-dark);}
+.callout .btn-primary:hover{background:#EDE9DA;}
+footer{background:var(--ink); color:#D8D3C6; padding:40px 0 calc(28px + env(safe-area-inset-bottom, 0px));}
+footer a{color:#D8D3C6;}
+.foot-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:28px;}
+footer h4{font-family:'PT Serif',serif; margin:0 0 10px; color:#fff;}
+footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:.88rem;}
+.foot-bottom{border-top:1px solid #3d3b34; margin-top:24px; padding-top:16px; font-size:.8rem; color:#9B9788;}
+.breadcrumb{font-size:.85rem; color:var(--ink-soft); margin-bottom:10px;}
+.breadcrumb a{color:var(--ink-soft);}
+@media (max-width: 760px){
+  .grid.cols-2, .grid.cols-3{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr; gap:20px;}
+  nav{display:none;}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="topbar">
+    <a class="brand" href="__INDEX__">Ритуальный Дом «Покой»</a>
+    <nav>
+      <a href="__INDEX__">Услуги</a>
+      <a href="__COMMERCIAL__">Каталог и цены</a>
+      <a href="__GEO__">География</a>
+      <a href="__INFO__" class="active">Вопросы</a>
+      <a href="__SERVICE__">Контакты</a>
+    </nav>
+    <a class="phone-btn" href="tel:+74950000000">+7 (495) 000-00-00</a>
+  </div>
+</header>
+
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="__INDEX__">Главная</a> / Вопросы</div>
+    <h1>Порядок оказания ритуальных услуг: ответы на частые вопросы</h1>
+    <p>Что делать после смерти близкого, какие документы нужны, куда обращаться и как проходит организация похорон — пошагово.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="faq">
+      <details open>
+        <summary>Что делать сразу после смерти близкого?</summary>
+        <p>Вызовите скорую или полицию для констатации смерти, затем позвоните нашему агенту — мы подскажем порядок оформления документов и возьмём организацию на себя.</p>
+      </details>
+      <details>
+        <summary>Как проходит захоронение?</summary>
+        <p>Всё о захоронении: какие документы нужны, сколько это стоит, как выбрать место на кладбище и в какие сроки проводится погребение по закону.</p>
+      </details>
+      <details>
+        <summary>Что входит в ритуальные услуги на кладбище?</summary>
+        <p>Копка могилы, установка оградки и памятника, благоустройство и уход за захоронением. Работаем на всех кладбищах города и области.</p>
+      </details>
+      <details>
+        <summary>Как благоустроить могилу?</summary>
+        <p>Благоустройство под ключ: укладка плитки, установка ограды и памятника, посадка цветов, регулярный уход за захоронением на кладбище.</p>
+      </details>
+      <details>
+        <summary>Как оплатить ритуальные услуги?</summary>
+        <p>Наличный и безналичный расчёт, рассрочка без переплат, а также порядок получения социального пособия на погребение.</p>
+      </details>
+      <details>
+        <summary>Есть ли отзывы о вашей работе?</summary>
+        <p>Реальные отзывы клиентов о работе ритуального агентства: качество обслуживания, скорость выезда агента, цены и отношение к семье в трудную минуту — доступны по запросу у агента.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="callout">
+      <h2>Остались вопросы?</h2>
+      <p>Агент бесплатно проконсультирует и подскажет порядок действий.</p>
+      <a class="btn-primary" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Ритуальный Дом «Покой»</h4>
+        <p style="color:#B7B1A2;">Работаем круглосуточно, без выходных и праздников. Вызов агента возможен в любое время суток.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a href="mailto:info@pokoy-ritual.ru">info@pokoy-ritual.ru</a></li>
+          <li>Москва, ул. Примерная, 1</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="__INDEX__">Услуги</a></li>
+          <li><a href="__COMMERCIAL__">Каталог и цены</a></li>
+          <li><a href="__GEO__">География</a></li>
+          <li><a href="__INFO__">Вопросы</a></li>
+          <li><a href="__SERVICE__">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Ритуальный Дом «Покой». Все права защищены.</div>
+  </div>
+</footer>
+</body>
+</html>
